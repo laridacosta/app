@@ -1,7 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TimezoneController;
 
-Route::get('/', [TimezoneController::class, 'index'])->name('index');
-Route::post('/get-time', [TimezoneController::class, 'getTime'])->name('get-time');
+use App\Http\Controllers\TimeController;
+use Illuminate\Support\Facades\Route;
+
+// Rota para exibir o formulário
+Route::get('/', [TimeController::class, 'index'])->name('home');
+
+// Rota para obter o tempo (essa já existe)
+Route::post('/getTime', [TimeController::class, 'getTime'])->name('getTime');
+
+
+
+
+
+
